@@ -1,32 +1,37 @@
-let taskQueue = [
-   {
-      cycle: 'hour',
-      time: '1:30',
-      tntervalDays: 2,
-      method: function () {
+let taskQueue = []
 
-      }
+let methods = {
+   hour(item) {
+      console.log(item)
    },
-   {
-      cycle: 'day',
-      time: '5:30',
-      tntervalDays: 2,
-      method: function () {
+   day() {
 
-      }
    },
-   {
-      cycle: 'week',
-      time: ['15:30', '6:30'],
-      week: [1, 3, 5, 0],
-      method: function () {
+   week() {
 
-      }
    },
-   {
-      cycle: 'perMonth',
-      method: function () {
+   perMonth() {
 
+   }
+}
+
+function traversal(...values) {
+   taskQueue.push(...values)
+   let nowTime = new Date()
+   let RecentTime
+   for (let item of taskQueue) {
+      let method = methods[item.cycle]
+      if (method) {
+         method(item)
       }
    }
-]
+}
+
+traversal.add = function (...values) {
+
+   traversal(...values)
+   return traversal
+
+}
+
+module.exports = traversal

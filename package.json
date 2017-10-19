@@ -1,7 +1,7 @@
 {
   "name": "timing-task",
-  "version": "1.0.0",
-  "description": "Node.js定时任务，使用单个计时器处理任务队列",
+  "version": "1.0.1",
+  "description": "Node.js定时任务，使用单个定时器处理任务队列",
   "main": "index.js",
   "scripts": {
     "test": "nodemon test"
