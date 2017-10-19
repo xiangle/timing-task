@@ -1,0 +1,12 @@
+{
+  "name": "timing-task",
+  "version": "1.0.0",
+  "description": "定时任务",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon test"
+  },
+  "license": "ISC",
+  "keywords": [
+  ]
+}
