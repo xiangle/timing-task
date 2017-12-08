@@ -2,7 +2,7 @@ let taskQueue = []
 
 let methods = {
    hour(item) {
-      console.log(item)
+
    },
    day() {
 
